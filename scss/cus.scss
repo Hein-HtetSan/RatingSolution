@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400&display=swap');
+
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(220, 6%, 36%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Orange: hsl(25, 97%, 53%);
+
+$Family: 'Overpass', sans-serif;
+$Weights-400: 400;
+$Weights-700: 700;
+$Font-size-paragraph: 15px;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background-color: $Very-Dark-Blue;
+    .card{
+        width: 350px;
+        height: 350px;
+        background: $Dark-Blue;
+        border-radius: 25px;
+        padding: 15px;
+        overflow: hidden;
+        position: relative;
+        .card-head{
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            .logo{
+                width: 40px;
+                height: 40px;
+                background-color: $Medium-Grey;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+            }
+        }
+        .card-body{
+            width: 100%;
+            height: 220px;
+            padding: 10px;
+            h2{
+                padding-top: 10px;
+                font-family: $Family;
+                font-weight: $Weights-700;
+                color: $White;
+            }
+            p{
+                padding-top: 10px;
+                font-family: $Family;
+                font-weight: $Weights-400;
+                color: $Light-Grey;
+                font-size: $Font-size-paragraph;
+            }
+            .num-group{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding-top: 20px;
+                .btn{
+                    width: 50px;
+                    height: 50px;
+                    background-color: $Medium-Grey;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        background-color: $Light-Grey;
+                    }
+                    .num-btn{
+                        font-family: $Family;
+                        font-weight: $Weights-400;
+                        color: $White;
+                        padding-bottom: 5px;
+                        font-size: 22px;
+                    }
+                }
+                .btn.active{
+                        background: $Orange;
+                    }
+            }
+        }
+        .card-button{
+            width: 100%;
+            height:50px;
+            padding: 10px;
+            .submit-btn{
+                width: 100%;
+                height: 40px;
+                background-color: $Orange;
+                border: none;
+                border-radius: 29px;
+                font-family: $Family;
+                font-weight: $Weights-400;
+                letter-spacing: 2px;
+                color: $White;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: .3s ease-in-out;
+                &:hover{
+                    background-color: $White;
+                    color: $Orange;
+                }
+            }
+        }
+    }
+}
+.container-2{
+    z-index: -11;
+    visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background-color: $Very-Dark-Blue;
+    transition: 1s ease-in-out;
+    transition-duration: 1s ;
+    .card-2{
+        width: 350px;
+        height: 350px;
+        background: $Dark-Blue;
+        border-radius: 25px;
+        padding: 15px;
+        overflow: hidden;
+        position: relative;
+        .card-head{
+            width: 100%;
+            height: 120px;
+            display: grid;
+            place-items: center;
+            
+        }
+        .card-body{
+            width: 100%;
+            height: 180px;
+            padding: 10px;
+            padding-top: 20px;
+
+            .content{
+                margin-left: 50px;
+                width: 200px;
+                height: 35px;
+                padding-top: 10px;
+                background-color: rgba(255,255,255,0.1);
+                text-align: center;
+                font-family: $Family;
+                font-weight: $Weights-400;
+                color: $Orange;
+                text-align: center;
+                font-size: $Font-size-paragraph;
+                border-radius: 20px;
+            }
+            h2{
+                padding-top: 20px;
+                font-family: $Family;
+                font-weight: $Weights-700;
+                color: $White;
+                text-align: center;
+            }
+            p{
+                padding-top: 10px;
+                font-family: $Family;
+                font-weight: $Weights-400;
+                color: $Light-Grey;
+                text-align: center;
+                font-size: $Font-size-paragraph;
+            }
+            
+        }
+    }
+    
+    
+}
+.container-2.show-submit{
+    visibility: visible;
+    z-index: 11;
+}

@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #121417;
+}
+
+.container .card {
+  width: 350px;
+  height: 350px;
+  background: #252d37;
+  border-radius: 25px;
+  padding: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .card .card-head {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.container .card .card-head .logo {
+  width: 40px;
+  height: 40px;
+  background-color: #565a61;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container .card .card-body {
+  width: 100%;
+  height: 220px;
+  padding: 10px;
+}
+
+.container .card .card-body h2 {
+  padding-top: 10px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.container .card .card-body p {
+  padding-top: 10px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  color: #959eac;
+  font-size: 15px;
+}
+
+.container .card .card-body .num-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.container .card .card-body .num-group .btn {
+  width: 50px;
+  height: 50px;
+  background-color: #565a61;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.container .card .card-body .num-group .btn:hover {
+  background-color: #959eac;
+}
+
+.container .card .card-body .num-group .btn .num-btn {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  color: white;
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+
+.container .card .card-body .num-group .btn.active {
+  background: #fb7413;
+}
+
+.container .card .card-button {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.container .card .card-button .submit-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #fb7413;
+  border: none;
+  border-radius: 29px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.container .card .card-button .submit-btn:hover {
+  background-color: white;
+  color: #fb7413;
+}
+
+.container-2 {
+  z-index: -11;
+  visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #121417;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.container-2 .card-2 {
+  width: 350px;
+  height: 350px;
+  background: #252d37;
+  border-radius: 25px;
+  padding: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-2 .card-2 .card-head {
+  width: 100%;
+  height: 120px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container-2 .card-2 .card-body {
+  width: 100%;
+  height: 180px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.container-2 .card-2 .card-body .content {
+  margin-left: 50px;
+  width: 200px;
+  height: 35px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  color: #fb7413;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+.container-2 .card-2 .card-body h2 {
+  padding-top: 20px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.container-2 .card-2 .card-body p {
+  padding-top: 10px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  color: #959eac;
+  text-align: center;
+  font-size: 15px;
+}
+
+.container-2.show-submit {
+  visibility: visible;
+  z-index: 11;
+}
+/*# sourceMappingURL=cus.css.map */
